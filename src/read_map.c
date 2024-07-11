@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   read_map.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: allera-m <allera-m@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/06/27 18:07:28 by allera-m          #+#    #+#             */
+/*   Updated: 2024/07/04 10:18:07 by allera-m         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../minilibx-linux/mlx.h"
 #include "../includes/map.h"
 #include "../libft/libft.h"
@@ -69,4 +81,5 @@ void read_map(char *map_name, t_map *map_design)
     }
     close(fd);
     fill_map_struct(buffer, map_design);
+    check_map(map_design);
 }

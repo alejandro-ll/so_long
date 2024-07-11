@@ -24,13 +24,13 @@ int handle_keypress(int keycode, t_hook_data *data)
     int new_x = data->player->x;
     int new_y = data->player->y;
 
-    if (keycode == 65361) // Flecha izquierda
+    if (keycode == 97) // Flecha izquierda
         new_x--;
-    else if (keycode == 65363) // Flecha derecha
+    else if (keycode == 100) // Flecha derecha
         new_x++;
-    else if (keycode == 65364) // Flecha abajo
+    else if (keycode == 115) // Flecha abajo
         new_y++;
-    else if (keycode == 65362) // Flecha arriba
+    else if (keycode == 119) // Flecha arriba
         new_y--;
     if (new_x >= 0 && new_x < data->map->cols && new_y >= 0 && new_y < data->map->rows)
     {

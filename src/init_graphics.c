@@ -8,12 +8,12 @@ int exit_hook(void)
 }
 
 int key_hook(int keycode, t_hook_data *data)
-{
+{   
     if (keycode == 65307)
     {
         exit(0);
     }
-    else if (keycode == 65361 || keycode == 65363 || keycode == 65362 || keycode == 65364)
+    else if (keycode == 100 || keycode ==  97 || keycode == 119 || keycode == 115)
     {
         find_player_position(data->map, data->player);
         handle_keypress(keycode, data);
