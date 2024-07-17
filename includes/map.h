@@ -12,6 +12,8 @@ typedef struct map_info
     int     cols;
     char    **grid;
 	int		coin_num;
+    int		player_x;
+	int		player_y;
 } t_map;
 
 typedef struct map_objs
@@ -61,6 +63,7 @@ int		get_coin_num(t_map *map);
 void	exit_object(t_hook_data *data, int new_x, int new_y);
 void	check_map(t_map *map_design);
 int		check_ber(char *filename);
-
+void    sl_path_check(t_map *map_design, int y, int x); // Declaración de la función
+void	sl_put_player(t_map *map_design);
 
 #endif

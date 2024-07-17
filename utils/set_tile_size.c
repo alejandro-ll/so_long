@@ -21,12 +21,10 @@ void set_tile_size(t_map_objs *data, t_map *table) {
     int min_tile_size_width; 
     int min_tile_size_height; 
 
-
-    printf("numero de filas-> %d, numero de columnas %d", table->rows, table->cols);
+    //printf("numero de filas-> %d, numero de columnas %d", table->rows, table->cols);
     min_tile_size_width = data->window_width / table->cols;
     min_tile_size_height = data->window_height / table->rows;
     data->tile_size = min_tile_size_width < min_tile_size_height ? min_tile_size_width : min_tile_size_height;
-
     print_matrix(table);
     print_tile_info(data, min_tile_size_width, min_tile_size_height);
 }
