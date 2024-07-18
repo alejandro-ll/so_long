@@ -12,7 +12,7 @@ void	pick_coin(t_hook_data *data, int new_x, int new_y)
 	    update_map(data->map, data->player);
 	    draw_level(data->m_objs, data->map);
 		data->player->movs++;
-        printf("\nnumero de monedas totales: %d, numero de monedas recogidas: %d\n", data->map->coin_num, data->player->coins);
+        //printf("\nnumero de monedas totales: %d, numero de monedas recogidas: %d\n", data->map->coin_num, data->player->coins);
 		//printf("\nnúmero de movimientos realizados: %d\n", data->player->movs);
 	}
 }
