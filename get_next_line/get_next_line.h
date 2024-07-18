@@ -6,7 +6,7 @@
 /*   By: allera-m <allera-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 12:54:49 by marvin            #+#    #+#             */
-/*   Updated: 2023/04/17 02:28:30 by allera-m         ###   ########.fr       */
+/*   Updated: 2024/07/18 22:49:06 by allera-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 # include <stdio.h>
 # include <fcntl.h>
 
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 42
-#endif
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 char	*get_next_line(int fd);
 char	*ft_strjoin(char const *s1, char const *s2);

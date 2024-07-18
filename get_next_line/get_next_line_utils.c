@@ -6,7 +6,7 @@
 /*   By: allera-m <allera-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 14:18:00 by marvin            #+#    #+#             */
-/*   Updated: 2023/04/17 05:42:24 by allera-m         ###   ########.fr       */
+/*   Updated: 2024/07/18 23:45:59 by allera-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	return (res);
 }
 
-char	*ft_strchr(const char *string, int searchedChar )
+char	*ft_strchr(const char *string, int searchedChar)
 {
 	char	*str;
 
