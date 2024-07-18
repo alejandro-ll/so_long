@@ -36,12 +36,16 @@ int handle_keypress(int keycode, t_hook_data *data)
     {
         if (data->map->grid[new_y][new_x] == '0')
         {
+            write(1, "\b\b\b\b\b\b\b\b\b\b", 11);
             data->player->new_x = new_x;
             data->player->new_y = new_y;
 
             update_map(data->map, data->player);
             draw_level(data->m_objs, data->map);
             data->player->movs++;
+            write(1, "Moves : ", 9);
+            ft_putnbr_fd(data->player->movs, 1);
+
             return (0);
         }
         pick_coin(data, new_x, new_y);
