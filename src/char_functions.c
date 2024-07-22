@@ -22,6 +22,18 @@ void	update_map(t_map *map, t_char_info *player)
 	player->y = player->new_y;
 }
 
+void	calculate_new_position(int keycode, int *new_x, int *new_y)
+{
+	if (keycode == 97)
+		(*new_x)--;
+	else if (keycode == 100)
+		(*new_x)++;
+	else if (keycode == 115)
+		(*new_y)++;
+	else if (keycode == 119)
+		(*new_y)--;
+}
+
 int	handle_keypress(int keycode, t_hook_data *data)
 {
 	int	new_x;
@@ -29,14 +41,7 @@ int	handle_keypress(int keycode, t_hook_data *data)
 
 	new_x = data->player->x;
 	new_y = data->player->y;
-	if (keycode == 97)
-		new_x--;
-	else if (keycode == 100)
-		new_x++;
-	else if (keycode == 115)
-		new_y++;
-	else if (keycode == 119)
-		new_y--;
+	calculate_new_position(keycode, &new_x, &new_y);
 	if (new_x >= 0 && new_x < data->map->cols && new_y >= 0
 		&& new_y < data->map->rows)
 	{

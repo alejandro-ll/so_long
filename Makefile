@@ -1,7 +1,7 @@
 NAME = so_long
 SRCS_DIR = ./src
 UTILS_DIR = ./utils
-SRCS = $(SRCS_DIR)/main.c $(SRCS_DIR)/read_map.c $(SRCS_DIR)/init_graphics.c $(SRCS_DIR)/open_images_map.c $(SRCS_DIR)/draw_map.c $(SRCS_DIR)/char_functions.c $(SRCS_DIR)/hook_loader.c $(SRCS_DIR)/open_images_map_two.c $(SRCS_DIR)/pick_coin.c $(SRCS_DIR)/exit_object.c $(UTILS_DIR)/set_tile_size.c $(UTILS_DIR)/set_window_size.c $(UTILS_DIR)/check_map.c $(UTILS_DIR)/check_map_two.c $(UTILS_DIR)/check_solution.c
+SRCS = $(SRCS_DIR)/main.c $(UTILS_DIR)/check_map_three.c $(SRCS_DIR)/read_map_two.c $(SRCS_DIR)/read_map.c $(SRCS_DIR)/init_graphics.c $(SRCS_DIR)/open_images_map.c $(SRCS_DIR)/draw_map.c $(SRCS_DIR)/char_functions.c $(SRCS_DIR)/hook_loader.c $(SRCS_DIR)/open_images_map_two.c $(SRCS_DIR)/pick_coin.c $(SRCS_DIR)/exit_object.c $(UTILS_DIR)/set_tile_size.c $(UTILS_DIR)/set_window_size.c $(UTILS_DIR)/check_map.c $(UTILS_DIR)/check_map_two.c $(UTILS_DIR)/check_solution.c
 OBJS = $(SRCS:.c=.o)
 CFLAGS = -Wall -Wextra -Werror
 MLX_FLAGS = -L./minilibx-linux -lmlx -lXext -lX11 -lm
