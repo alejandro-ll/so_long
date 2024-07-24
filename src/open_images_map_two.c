@@ -6,7 +6,7 @@
 /*   By: allera-m <allera-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 22:28:54 by allera-m          #+#    #+#             */
-/*   Updated: 2024/07/18 23:24:48 by allera-m         ###   ########.fr       */
+/*   Updated: 2024/07/23 17:05:37 by allera-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	open_exit(t_map_objs *data)
 	if (fd == -1)
 	{
 		perror("Error opening exit image file");
+		exit(1);
 	}
 	data->exit_img = mlx_xpm_file_to_image(data->mlx, "images/exit.xpm",
 			&data->tile_size, &data->tile_size);
@@ -31,6 +32,7 @@ void	open_exit(t_map_objs *data)
 	{
 		perror("Error loading exit image");
 		close(fd);
+		exit(1);
 	}
 	close(fd);
 }

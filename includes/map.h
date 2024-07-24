@@ -6,7 +6,7 @@
 /*   By: allera-m <allera-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 23:30:39 by allera-m          #+#    #+#             */
-/*   Updated: 2024/07/22 15:25:09 by allera-m         ###   ########.fr       */
+/*   Updated: 2024/07/23 15:53:32 by allera-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,6 @@ void			sl_put_player(t_map *map_design);
 char			*read_file_to_buffer(char *full_path);
 int				check_vertical_walls(t_map *map_design);
 int				check_horizontal_walls(t_map *map_design);
-int				count_chars_in_map(t_map *map, int *player_count, int *collectible_count, int *exit_count);
+int				count_chars_in_map(t_map *map, int *player_count,
+					int *collectible_count, int *exit_count);
 #endif

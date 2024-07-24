@@ -6,7 +6,7 @@
 /*   By: allera-m <allera-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 22:29:01 by allera-m          #+#    #+#             */
-/*   Updated: 2024/07/18 23:24:56 by allera-m         ###   ########.fr       */
+/*   Updated: 2024/07/23 17:05:54 by allera-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	open_wall(t_map_objs *data)
 	if (fd == -1)
 	{
 		perror("Error opening wall image file");
+		exit(1);
 	}
 	data->wall_img = mlx_xpm_file_to_image(data->mlx, "images/wall.xpm",
 			&data->tile_size, &data->tile_size);
@@ -31,6 +32,7 @@ void	open_wall(t_map_objs *data)
 	{
 		perror("Error loading wall image");
 		close(fd);
+		exit(1);
 	}
 	close(fd);
 }
@@ -43,6 +45,7 @@ void	open_floor(t_map_objs *data)
 	if (fd == -1)
 	{
 		perror("Error opening floor image file");
+		exit(1);
 	}
 	data->floor_img = mlx_xpm_file_to_image(data->mlx, "images/grass.xpm",
 			&data->tile_size, &data->tile_size);
@@ -50,6 +53,7 @@ void	open_floor(t_map_objs *data)
 	{
 		perror("Error loading floor image");
 		close(fd);
+		exit(1);
 	}
 	close(fd);
 }
@@ -62,6 +66,7 @@ void	open_player(t_map_objs *data)
 	if (fd == -1)
 	{
 		perror("Error opening player image file");
+		exit(1);
 	}
 	data->ch_img = mlx_xpm_file_to_image(data->mlx, "images/character.xpm",
 			&data->tile_size, &data->tile_size);
@@ -69,6 +74,7 @@ void	open_player(t_map_objs *data)
 	{
 		perror("Error loading player image");
 		close(fd);
+		exit(1);
 	}
 	close(fd);
 }
@@ -81,6 +87,7 @@ void	open_coin(t_map_objs *data)
 	if (fd == -1)
 	{
 		perror("Error opening coin image file");
+		exit(1);
 	}
 	data->coin_img = mlx_xpm_file_to_image(data->mlx, "images/coin.xpm",
 			&data->tile_size, &data->tile_size);

@@ -6,7 +6,7 @@
 /*   By: allera-m <allera-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 22:28:47 by allera-m          #+#    #+#             */
-/*   Updated: 2024/07/18 23:24:42 by allera-m         ###   ########.fr       */
+/*   Updated: 2024/07/24 20:44:34 by allera-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,13 @@ int	main(int argc, char *argv[])
 	t_hook_data	hook_data;
 
 	(void)argc;
+	if (argc != 2)
+	{
+		ft_putstr_fd("Error\n", 1);
+		ft_putstr_fd("El programa debe recibir un nombre de programa y un mapa",
+			1);
+		exit(1);
+	}
 	if (check_ber(argv[1]) != 1)
 	{
 		ft_putstr_fd("Error\n", 1);

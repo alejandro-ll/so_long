@@ -6,7 +6,7 @@
 /*   By: allera-m <allera-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/04 17:27:45 by allera-m          #+#    #+#             */
-/*   Updated: 2023/04/04 18:52:53 by allera-m         ###   ########.fr       */
+/*   Updated: 2024/07/23 16:00:28 by allera-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,10 +74,7 @@ char	**ft_split(char const *s, char c)
 			s++;
 		arr[i] = ft_substr(s, 0, ft_count_chars(s, c));
 		if (!arr[i])
-		{
-			ft_free(arr, i);
-			return (NULL);
-		}
+			return (ft_free(arr, i), NULL);
 		s += ft_count_chars(s, c);
 		i++;
 	}
