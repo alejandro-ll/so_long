@@ -36,3 +36,24 @@ void	open_exit(t_map_objs *data)
 	}
 	close(fd);
 }
+
+void	open_enemy(t_map_objs *data)
+{
+	int	fd;
+
+		fd = open("images/enemigo.xpm", O_RDONLY);
+	if (fd == -1)
+	{
+		perror("Error opening exit image file");
+		exit(1);
+	}
+	data->enemy_img = mlx_xpm_file_to_image(data->mlx, "images/enemigo.xpm",
+			&data->tile_size, &data->tile_size);
+	if (!data->enemy_img)
+	{
+		perror("Error loading exit image");
+		close(fd);
+		exit(1);
+	}
+	close(fd);
+}

@@ -37,6 +37,7 @@ typedef struct map_objs
 	void		*ch_img;
 	void		*coin_img;
 	void		*exit_img;
+	void		*enemy_img;
 	int			tile_size;
 	int			window_width;
 	int			window_height;
@@ -70,6 +71,7 @@ int				handle_keypress(int keycode, t_hook_data *data);
 void			hook_load(t_char_info *player, t_map *map, t_map_objs *m_objs,
 					t_hook_data *hook_data);
 void			open_exit(t_map_objs *data);
+void			open_enemy(t_map_objs *data);
 void			pick_coin(t_hook_data *data, int new_x, int new_y);
 void			update_map(t_map *map, t_char_info *player);
 int				get_coin_num(t_map *map);

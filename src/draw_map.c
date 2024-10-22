@@ -18,17 +18,19 @@
 
 void	*select_image(t_map_objs *data, char cell)
 {
-	if (cell == '1')
-		return (data->wall_img);
-	else if (cell == 'P')
-		return (data->ch_img);
-	else if (cell == '0')
-		return (data->floor_img);
-	else if (cell == 'C')
-		return (data->coin_img);
-	else if (cell == 'E')
-		return (data->exit_img);
-	return (NULL);
+    if (cell == '1')
+        return (data->wall_img);
+    else if (cell == 'P')
+        return (data->ch_img);
+    else if (cell == '0')
+        return (data->floor_img);
+    else if (cell == 'C')
+        return (data->coin_img);
+    else if (cell == 'E')
+        return (data->exit_img);
+    else if (cell == 'X')
+        return (data->enemy_img);
+    return (NULL);
 }
 
 void	draw_screen_movs(t_map_objs *data, int movs)

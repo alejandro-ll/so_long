@@ -45,6 +45,11 @@ int	handle_keypress(int keycode, t_hook_data *data)
 	if (new_x >= 0 && new_x < data->map->cols && new_y >= 0
 		&& new_y < data->map->rows)
 	{
+    if (data->map->grid[new_y][new_x] == 'X')
+    {
+        ft_putstr_fd("\nGame Over\n", 1);
+        exit(0);
+    }	
 		if (data->map->grid[new_y][new_x] == '0')
 		{
 			write(1, "\b\b\b\b\b\b\b\b\b\b", 11);

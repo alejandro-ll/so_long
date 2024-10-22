@@ -106,4 +106,5 @@ void	open_images(t_map_objs *data)
 	open_player(data);
 	open_coin(data);
 	open_exit(data);
+	open_enemy(data);
 }

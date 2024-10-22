@@ -15,7 +15,7 @@
 
 int	is_valid_char(char c)
 {
-	return (c == '0' || c == '1' || c == 'C' || c == 'E' || c == 'P');
+	return (c == '0' || c == '1' || c == 'C' || c == 'E' || c == 'P' || c == 'X');
 }
 
 int	count_chars_in_map(t_map *map, int *player_count, int *collectible_count,
