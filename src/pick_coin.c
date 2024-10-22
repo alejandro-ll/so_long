@@ -24,6 +24,7 @@ void	pick_coin(t_hook_data *data, int new_x, int new_y)
 		update_map(data->map, data->player);
 		draw_level(data->m_objs, data->map);
 		data->player->movs++;
+		draw_screen_movs(data->m_objs, data->player->movs);
 	}
 }
 

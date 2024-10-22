@@ -53,6 +53,7 @@ int	handle_keypress(int keycode, t_hook_data *data)
 			update_map(data->map, data->player);
 			draw_level(data->m_objs, data->map);
 			data->player->movs++;
+			draw_screen_movs(data->m_objs, data->player->movs);
 			write(1, "Moves : ", 9);
 			ft_putnbr_fd(data->player->movs, 1);
 			return (0);

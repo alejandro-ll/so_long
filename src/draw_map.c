@@ -31,6 +31,16 @@ void	*select_image(t_map_objs *data, char cell)
 	return (NULL);
 }
 
+void	draw_screen_movs(t_map_objs *data, int movs)
+{
+	char	*movs_str;
+
+	movs_str = ft_itoa(movs);
+	mlx_string_put(data->mlx, data->win, 30, 20, 0x00000000, "Moves : ");
+	mlx_string_put(data->mlx, data->win, 100, 20, 0x00000000, movs_str);
+	free(movs_str);
+}
+
 void	draw_level(t_map_objs *data, t_map *table)
 {
 	void	*img;

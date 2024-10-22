@@ -83,4 +83,5 @@ int				check_vertical_walls(t_map *map_design);
 int				check_horizontal_walls(t_map *map_design);
 int				count_chars_in_map(t_map *map, int *player_count,
 					int *collectible_count, int *exit_count);
+void			draw_screen_movs(t_map_objs *data, int movs);
 #endif
