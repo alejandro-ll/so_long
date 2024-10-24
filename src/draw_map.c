@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   draw_map.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: allera-m <allera-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 22:27:56 by allera-m          #+#    #+#             */
-/*   Updated: 2024/10/24 08:27:27 by user             ###   ########.fr       */
+/*   Updated: 2024/10/24 14:02:49 by allera-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,19 +18,19 @@
 
 void	*select_image(t_map_objs *data, char cell)
 {
-    if (cell == '1')
-        return (data->wall_img);
-    else if (cell == 'P')
-        return (data->ch_img_now);
-    else if (cell == '0')
-        return (data->floor_img);
-    else if (cell == 'C')
-        return (data->coin_img);
-    else if (cell == 'E')
-        return (data->exit_img);
-    else if (cell == 'X')
-        return (data->enemy_img);
-    return (NULL);
+	if (cell == '1')
+		return (data->wall_img);
+	else if (cell == 'P')
+		return (data->ch_img_now);
+	else if (cell == '0')
+		return (data->floor_img);
+	else if (cell == 'C')
+		return (data->coin_img);
+	else if (cell == 'E')
+		return (data->exit_img);
+	else if (cell == 'X')
+		return (data->enemy_img);
+	return (NULL);
 }
 
 void	draw_screen_movs(t_map_objs *data, int movs)

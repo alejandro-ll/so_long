@@ -6,7 +6,7 @@
 /*   By: allera-m <allera-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 22:28:54 by allera-m          #+#    #+#             */
-/*   Updated: 2024/07/23 17:05:37 by allera-m         ###   ########.fr       */
+/*   Updated: 2024/10/24 14:03:53 by allera-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	open_enemy(t_map_objs *data)
 {
 	int	fd;
 
-		fd = open("images/enemigo.xpm", O_RDONLY);
+	fd = open("images/enemigo.xpm", O_RDONLY);
 	if (fd == -1)
 	{
 		perror("Error opening exit image file");

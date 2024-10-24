@@ -6,7 +6,7 @@
 /*   By: allera-m <allera-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/22 15:23:54 by allera-m          #+#    #+#             */
-/*   Updated: 2024/07/22 19:13:44 by allera-m         ###   ########.fr       */
+/*   Updated: 2024/10/24 14:06:03 by allera-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 
 int	is_valid_char(char c)
 {
-	return (c == '0' || c == '1' || c == 'C' || c == 'E' || c == 'P' || c == 'X');
+	return (c == '0' || c == '1' || c == 'C' || c == 'E' || c == 'P'
+		|| c == 'X');
 }
 
 int	count_chars_in_map(t_map *map, int *player_count, int *collectible_count,

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   open_images_player.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: allera-m <allera-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 08:20:20 by user              #+#    #+#             */
-/*   Updated: 2024/10/24 08:24:38 by user             ###   ########.fr       */
+/*   Updated: 2024/10/24 14:04:15 by allera-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,8 @@ void	open_character_right(t_map_objs *data)
 		perror("Error opening character right image file");
 		exit(1);
 	}
-	data->ch_img_right = mlx_xpm_file_to_image(data->mlx, "images/red_right.xpm",
-			&data->tile_size, &data->tile_size);
+	data->ch_img_right = mlx_xpm_file_to_image(data->mlx,
+			"images/red_right.xpm", &data->tile_size, &data->tile_size);
 	if (!data->ch_img_right)
 	{
 		perror("Error loading character right image");

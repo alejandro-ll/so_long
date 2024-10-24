@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   open_images_player_two.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: allera-m <allera-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 09:08:05 by user              #+#    #+#             */
-/*   Updated: 2024/10/24 09:11:14 by user             ###   ########.fr       */
+/*   Updated: 2024/10/24 14:05:45 by allera-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,8 @@ void	open_character_left_two(t_map_objs *data)
 		perror("Error opening character left two image file");
 		exit(1);
 	}
-	data->ch_img_left_two = mlx_xpm_file_to_image(data->mlx, "images/red_left_2.xpm",
-			&data->tile_size, &data->tile_size);
+	data->ch_img_left_two = mlx_xpm_file_to_image(data->mlx,
+			"images/red_left_2.xpm", &data->tile_size, &data->tile_size);
 	if (!data->ch_img_left_two)
 	{
 		perror("Error loading character left two image");
@@ -47,8 +47,8 @@ void	open_character_right_two(t_map_objs *data)
 		perror("Error opening character right two image file");
 		exit(1);
 	}
-	data->ch_img_right_two = mlx_xpm_file_to_image(data->mlx, "images/red_right_2.xpm",
-			&data->tile_size, &data->tile_size);
+	data->ch_img_right_two = mlx_xpm_file_to_image(data->mlx,
+			"images/red_right_2.xpm", &data->tile_size, &data->tile_size);
 	if (!data->ch_img_right_two)
 	{
 		perror("Error loading character right two image");

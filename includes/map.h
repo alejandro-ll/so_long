@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: allera-m <allera-m@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 23:30:39 by allera-m          #+#    #+#             */
-/*   Updated: 2024/10/24 09:23:52 by user             ###   ########.fr       */
+/*   Updated: 2024/10/24 14:45:21 by allera-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,7 @@ void			draw_level(t_map_objs *data, t_map *table);
 void			set_window_size(t_map_objs *data, t_map *table);
 int				find_player_position(t_map *map, t_char_info *player);
 int				handle_keypress(int keycode, t_hook_data *data);
+void			check_keyhandle_ext(int keycode, int *new_y, t_hook_data *data);
 void			hook_load(t_char_info *player, t_map *map, t_map_objs *m_objs,
 					t_hook_data *hook_data);
 void			open_exit(t_map_objs *data);
