@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 23:30:39 by allera-m          #+#    #+#             */
-/*   Updated: 2024/10/24 08:25:27 by user             ###   ########.fr       */
+/*   Updated: 2024/10/24 09:23:52 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,13 @@ typedef struct map_objs
 	void		*exit_img;
 	void		*enemy_img;
 	void		*ch_img_left;
+	void		*ch_img_left_two;
 	void		*ch_img_right;
+	void		*ch_img_right_two;
 	void		*ch_img_up;
 	void		*ch_img_base;
+	int			right_animation_counter;
+	int			left_animation_counter;
 	int			tile_size;
 	int			window_width;
 	int			window_height;
@@ -77,6 +81,7 @@ void			hook_load(t_char_info *player, t_map *map, t_map_objs *m_objs,
 void			open_exit(t_map_objs *data);
 void			open_enemy(t_map_objs *data);
 void			open_images_player(t_map_objs *data);
+void			open_images_player_two(t_map_objs *data);
 void			pick_coin(t_hook_data *data, int new_x, int new_y);
 void			update_map(t_map *map, t_char_info *player);
 int				get_coin_num(t_map *map);

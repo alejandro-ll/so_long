@@ -6,7 +6,7 @@
 /*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 22:28:11 by allera-m          #+#    #+#             */
-/*   Updated: 2024/10/24 08:43:39 by user             ###   ########.fr       */
+/*   Updated: 2024/10/24 09:27:45 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,20 @@ void	calculate_new_position(int keycode, int *new_x, int *new_y, t_hook_data *da
 	if (keycode == 97)
 	{
 		(*new_x)--;
-		data->m_objs->ch_img_now = data->m_objs->ch_img_left;
+		if (data->m_objs->left_animation_counter % 2 == 0)
+			data->m_objs->ch_img_now = data->m_objs->ch_img_left;
+		else
+			data->m_objs->ch_img_now = data->m_objs->ch_img_left_two;
+		data->m_objs->left_animation_counter++;
 	}
 	else if (keycode == 100)
 	{
 		(*new_x)++;
-		data->m_objs->ch_img_now = data->m_objs->ch_img_right;
+		if (data->m_objs->right_animation_counter % 2 == 0)
+			data->m_objs->ch_img_now = data->m_objs->ch_img_right;
+		else
+			data->m_objs->ch_img_now = data->m_objs->ch_img_right_two;
+		data->m_objs->right_animation_counter++;
 	}
 	else if (keycode == 115)
 	{
