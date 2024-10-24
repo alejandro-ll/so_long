@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map.h                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allera-m <allera-m@student.42.fr>          +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 23:30:39 by allera-m          #+#    #+#             */
-/*   Updated: 2024/07/23 15:53:32 by allera-m         ###   ########.fr       */
+/*   Updated: 2024/10/24 08:25:27 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,14 @@ typedef struct map_objs
 	void		*win;
 	void		*wall_img;
 	void		*floor_img;
-	void		*ch_img;
+	void		*ch_img_now;
 	void		*coin_img;
 	void		*exit_img;
 	void		*enemy_img;
+	void		*ch_img_left;
+	void		*ch_img_right;
+	void		*ch_img_up;
+	void		*ch_img_base;
 	int			tile_size;
 	int			window_width;
 	int			window_height;
@@ -72,6 +76,7 @@ void			hook_load(t_char_info *player, t_map *map, t_map_objs *m_objs,
 					t_hook_data *hook_data);
 void			open_exit(t_map_objs *data);
 void			open_enemy(t_map_objs *data);
+void			open_images_player(t_map_objs *data);
 void			pick_coin(t_hook_data *data, int new_x, int new_y);
 void			update_map(t_map *map, t_char_info *player);
 int				get_coin_num(t_map *map);

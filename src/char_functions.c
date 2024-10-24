@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   char_functions.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allera-m <allera-m@student.42.fr>          +#+  +:+       +#+        */
+/*   By: user <user@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/18 22:28:11 by allera-m          #+#    #+#             */
-/*   Updated: 2024/07/18 23:27:25 by allera-m         ###   ########.fr       */
+/*   Updated: 2024/10/24 08:43:39 by user             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,28 @@ void	update_map(t_map *map, t_char_info *player)
 	player->y = player->new_y;
 }
 
-void	calculate_new_position(int keycode, int *new_x, int *new_y)
+void	calculate_new_position(int keycode, int *new_x, int *new_y, t_hook_data *data)
 {
 	if (keycode == 97)
+	{
 		(*new_x)--;
+		data->m_objs->ch_img_now = data->m_objs->ch_img_left;
+	}
 	else if (keycode == 100)
+	{
 		(*new_x)++;
+		data->m_objs->ch_img_now = data->m_objs->ch_img_right;
+	}
 	else if (keycode == 115)
+	{
 		(*new_y)++;
+		data->m_objs->ch_img_now = data->m_objs->ch_img_base;
+	}
 	else if (keycode == 119)
+	{
 		(*new_y)--;
+		data->m_objs->ch_img_now = data->m_objs->ch_img_up;
+	}
 }
 
 int	handle_keypress(int keycode, t_hook_data *data)
@@ -41,7 +53,7 @@ int	handle_keypress(int keycode, t_hook_data *data)
 
 	new_x = data->player->x;
 	new_y = data->player->y;
-	calculate_new_position(keycode, &new_x, &new_y);
+	calculate_new_position(keycode, &new_x, &new_y, data);
 	if (new_x >= 0 && new_x < data->map->cols && new_y >= 0
 		&& new_y < data->map->rows)
 	{
